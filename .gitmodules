@@ -1,0 +1,3 @@
+[submodule "PICado LCD/lib/HD44780-Driver-AT2560"]
+	path = PICado LCD/lib/HD44780-Driver-AT2560
+	url = https://github.com/ml3rc/HD44780-Driver-AT2560.git
