@@ -44,48 +44,48 @@ int main(void) {
 	BUTTON_PORT = 0xFF;    // enable internal pull-ups
 
 	/* Initialize LCD */
-	InitPins();
-	InitDisplay();
-	CreateCustomChar(symbol, 0);
+	DISP_InitPins();
+	DISP_InitDisplay();
+	DISP_CreateCustomChar(symbol, 0);
 
-	ClearDisplay();
+	DISP_ClearDisplay();
 
 	while (1) {
 
 		/* T0 -> Hello World */
 		if (!(BUTTON_PIN & (1 << T0))) {
-			PrintString(helloString);
+			DISP_PrintString(helloString);
 			_delay_ms(200);
 		}
 
 		/* T1 -> "23" */
 		if (!(BUTTON_PIN & (1 << T1))) {
-			PrintString(valueString);
+			DISP_PrintString(valueString);
 			_delay_ms(200);
 		}
 
 		/* T2 -> "3.141" */
 		if (!(BUTTON_PIN & (1 << T2))) {
-			PrintString(piString);
+			DISP_PrintString(piString);
 			_delay_ms(200);
 		}
 
 		/* T3 -> show custom symbol */
 		if (!(BUTTON_PIN & (1 << T3))) {
-			ShowCustomChar(0, 1, 0);
+			DISP_ShowCustomChar(0, 1, 0);
 			_delay_ms(200);
 		}
 
 		/* T4 -> shift display right */
 		if (!(BUTTON_PIN & (1 << T4))) {
-			ShiftRight();
+			DISP_ShiftRight();
 			_delay_ms(200);
 		}
 
 		/* T7 -> clear display */
 		if (!(BUTTON_PIN & (1 << T7))) {
 			const char formFeed[] = "\f";
-			PrintString(formFeed);
+			DISP_PrintString(formFeed);
 			_delay_ms(200);
 		}
 	}
