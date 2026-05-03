@@ -57,6 +57,8 @@ The project supports **special characters** like `\n`, `\t`, `\r`, `\b`, and `\f
 
 Before building the project, a small configuration step is required.
 
+Remember todo `git submodule update --init --recursive`
+
 ### 1. Install AVRdude
 
 Download AVRdude from:
