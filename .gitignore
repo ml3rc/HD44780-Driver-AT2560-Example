@@ -68,3 +68,18 @@ Makefile
 # Windows
 
 Thumbs.db
+
+# IDE / user-specific and sensitive files
+.vscode/
+.vs/
+.idea/
+*.code-workspace
+*.suo
+*.user
+*.atsuo
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
